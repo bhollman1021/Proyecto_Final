@@ -61,7 +61,7 @@ const MapaGeneral = () => {
 
   return (
     <>
-      {rol === "medico" ? (
+      {rol === "medico" || rol==="admin" ? (
         <MapaGeneralContainer coordenadas={coordenadas} />
       ) : (
         <h1>No tiene permisos</h1>

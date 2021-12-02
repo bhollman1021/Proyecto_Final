@@ -83,7 +83,7 @@ const RegistroCaso = (e) => {
 
   return (
     <div className="flex height-container justify-center items-center ">
-      {rol === "ayudante" ? (
+      {rol === "ayudante" || rol==="admin"? (
         <>
           <form
             class="w-full max-w-lg bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"

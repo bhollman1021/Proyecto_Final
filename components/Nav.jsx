@@ -57,7 +57,7 @@ const Nav = () => {
             ) : (
               <></>
             )}
-            {rol === "ayudante" ? (
+            {rol === "ayudante" || rol==="admin" ? (
               <>
                 <Link href="/RegistroCaso">
                   <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
@@ -73,7 +73,7 @@ const Nav = () => {
             ) : (
               <></>
             )}
-            {rol === "medico" ? (
+            {rol === "medico"  || rol==="admin"? (
               <>
                 <Link href="/Modulo_Visualizacion/Busqueda">
                   <a class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">

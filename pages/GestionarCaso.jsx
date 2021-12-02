@@ -149,7 +149,7 @@ const GestionarCaso = () => {
 
   return (
     <div class="flex flex-col">
-      {rol === "ayudante" ? (
+      {rol === "ayudante" || rol==="admin" ? (
         <>
           <div class="flex items-center justify-center  bg-white">
             <div class="col-span-12">

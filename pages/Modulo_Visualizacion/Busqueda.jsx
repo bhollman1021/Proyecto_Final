@@ -119,7 +119,7 @@ const Busqueda = () => {
   }, [session]);
   return (
     <div>
-      {rol === "medico" ? (
+      {rol === "medico"|| rol==="admin" ? (
         <>
           <div class="flex items-center justify-center mt-5 bg-white">
             <div class="col-span-12">
