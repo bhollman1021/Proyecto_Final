@@ -104,11 +104,11 @@ export default function Home() {
   return (
     <div>
       <div>
-        <div class="flex ">
+        <div className="flex ">
           {totalInfectados && <Froalacharts dataSource={totalInfectados} />}
           {totalBarranquilla && <Froalacharts dataSource={totalBarranquilla} />}
         </div>
-        <div class="flex justify-evenly ">
+        <div className="flex justify-evenly ">
           {dataSource && <Froalacharts dataSource={dataSource} />}
         </div>
       </div>

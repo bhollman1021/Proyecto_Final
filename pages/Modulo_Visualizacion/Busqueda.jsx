@@ -121,20 +121,20 @@ const Busqueda = () => {
     <div>
       {rol === "medico"|| rol==="admin" ? (
         <>
-          <div class="flex items-center justify-center mt-5 bg-white">
-            <div class="col-span-12">
-              <div class="overflow-auto lg:overflow-visible">
-                <div class="flex lg:justify-between border-b-2 border-fuchsia-900 pb-1">
-                  <h2 class="text-2xl text-gray-500 font-bold">
+          <div className="flex items-center justify-center mt-5 bg-white">
+            <div className="col-span-12">
+              <div className="overflow-auto lg:overflow-visible">
+                <div className="flex lg:justify-between border-b-2 border-fuchsia-900 pb-1">
+                  <h2 className="text-2xl text-gray-500 font-bold">
                     Casos Registrados
                   </h2>
-                  <div class="text-center flex-auto ml-10 flex ">
+                  <div className="text-center flex-auto ml-10 flex ">
                     <input
                       type="text"
                       name="name"
                       placeholder="Search..."
                       onChange={getParametrosFiltro}
-                      class="
+                      className="
               w-1/3
               py-2
               border-b-2 border-blue-600
@@ -142,9 +142,9 @@ const Busqueda = () => {
               focus:border-yellow-400
             "
                     />
-                    <div class="relative ">
+                    <div className="relative ">
                       <select
-                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                         id="grid-state"
                         onChange={getTipoBusqueda}
                       >
@@ -153,9 +153,9 @@ const Busqueda = () => {
                         <option value="3">Cedula</option>
                         <option value="4">Cedula y Nombre</option>
                       </select>
-                      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                         <svg
-                          class="fill-current h-4 w-4"
+                          className="fill-current h-4 w-4"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                         >
@@ -164,7 +164,7 @@ const Busqueda = () => {
                       </div>
                     </div>
                     <button
-                      class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                       type="button"
                       onClick={() => {
                         filtrarRegistroCasos();
@@ -174,22 +174,22 @@ const Busqueda = () => {
                     </button>
                   </div>
                 </div>
-                <table class="table text-gray-400 border-separate space-y-6 text-sm">
-                  <thead class="bg-blue-500 text-white">
+                <table className="table text-gray-400 border-separate space-y-6 text-sm">
+                  <thead className="bg-blue-500 text-white">
                     <tr>
-                      <th class="p-3">Codigo</th>
-                      <th class="p-3">Nombre</th>
-                      <th class="p-3 text-left">Apellido</th>
-                      <th class="p-3 text-left">Cedula</th>
-                      <th class="p-3 text-left">Sexo</th>
+                      <th className="p-3">Codigo</th>
+                      <th className="p-3">Nombre</th>
+                      <th className="p-3 text-left">Apellido</th>
+                      <th className="p-3 text-left">Cedula</th>
+                      <th className="p-3 text-left">Sexo</th>
 
-                      <th class="p-3 text-left">F.nacimiento</th>
-                      <th class="p-3 text-left">Dir.residencia</th>
+                      <th className="p-3 text-left">F.nacimiento</th>
+                      <th className="p-3 text-left">Dir.residencia</th>
 
-                      <th class="p-3">Dir.trabajo</th>
-                      <th class="p-3 text-left">Resultado</th>
-                      <th class="p-3 text-left">Fecha</th>
-                      <th class="p-3 text-left">Seleccionar</th>
+                      <th className="p-3">Dir.trabajo</th>
+                      <th className="p-3 text-left">Resultado</th>
+                      <th className="p-3 text-left">Fecha</th>
+                      <th className="p-3 text-left">Seleccionar</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -197,41 +197,41 @@ const Busqueda = () => {
                       casosRegistroFiltrados.map((dataCasosRegistrado) => {
                         return (
                           <tr key={dataCasosRegistrado.codigo_Caso}>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.codigo_caso}
                             </td>
 
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.nombre}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.apellido}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.cedula}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.sexo}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.fecha_nacimiento}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.direccion_residencia}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.direccion_trabajo}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.resultado_examen}
                             </td>
-                            <td class="p-3 font-medium capitalize">
+                            <td className="p-3 font-medium capitalize">
                               {dataCasosRegistrado.fecha_examen}
                             </td>
 
                             <td>
                               <button
-                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 type="button"
                                 onClick={() => {
                                   getCasoSeleccionado(
@@ -250,13 +250,13 @@ const Busqueda = () => {
               </div>
             </div>
           </div>
-          <div class="flex justify-evenly ">
+          <div className="flex justify-evenly ">
             <div>
-              <table class="table text-gray-400 border-separate space-y-6 text-sm">
-                <thead class="bg-blue-500 text-white">
+              <table className="table text-gray-400 border-separate space-y-6 text-sm">
+                <thead className="bg-blue-500 text-white">
                   <tr>
-                    <th class="p-3">Fecha</th>
-                    <th class="p-3 text-left">Estado</th>
+                    <th className="p-3">Fecha</th>
+                    <th className="p-3 text-left">Estado</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -264,10 +264,10 @@ const Busqueda = () => {
                     casoSeleccionado.map((casoSeleccionado, i) => {
                       return (
                         <tr key={i}>
-                          <td class="p-3 font-medium capitalize">
+                          <td className="p-3 font-medium capitalize">
                             {casoSeleccionado.fecha_actualizacion}
                           </td>
-                          <td class="p-3">{casoSeleccionado.estado}</td>
+                          <td className="p-3">{casoSeleccionado.estado}</td>
                         </tr>
                       );
                     })}
